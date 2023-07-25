@@ -11,6 +11,10 @@
 		A1A6BD2D2A6F8C48008B0266 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6BD2C2A6F8C48008B0266 /* ContentView.swift */; };
 		A1A6BD2F2A6F8C4A008B0266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A6BD2E2A6F8C4A008B0266 /* Assets.xcassets */; };
 		A1A6BD322A6F8C4A008B0266 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A6BD312A6F8C4A008B0266 /* Preview Assets.xcassets */; };
+		A1A6BD3B2A6FA336008B0266 /* PopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6BD3A2A6FA336008B0266 /* PopoverController.swift */; };
+		A1A6BD3D2A6FA6FF008B0266 /* HostingViewForPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6BD3C2A6FA6FF008B0266 /* HostingViewForPopover.swift */; };
+		A1A6BD3F2A6FA720008B0266 /* PopoverBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6BD3E2A6FA720008B0266 /* PopoverBackgroundView.swift */; };
+		A1A6BD412A6FA750008B0266 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6BD402A6FA750008B0266 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		A1A6BD2C2A6F8C48008B0266 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1A6BD2E2A6F8C4A008B0266 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1A6BD312A6F8C4A008B0266 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1A6BD3A2A6FA336008B0266 /* PopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverController.swift; sourceTree = "<group>"; };
+		A1A6BD3C2A6FA6FF008B0266 /* HostingViewForPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewForPopover.swift; sourceTree = "<group>"; };
+		A1A6BD3E2A6FA720008B0266 /* PopoverBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverBackgroundView.swift; sourceTree = "<group>"; };
+		A1A6BD402A6FA750008B0266 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				A1A6BD2A2A6F8C48008B0266 /* iOSPopoverApp.swift */,
 				A1A6BD2C2A6F8C48008B0266 /* ContentView.swift */,
+				A1A6BD3A2A6FA336008B0266 /* PopoverController.swift */,
+				A1A6BD3E2A6FA720008B0266 /* PopoverBackgroundView.swift */,
+				A1A6BD3C2A6FA6FF008B0266 /* HostingViewForPopover.swift */,
+				A1A6BD402A6FA750008B0266 /* ViewExtension.swift */,
 				A1A6BD2E2A6F8C4A008B0266 /* Assets.xcassets */,
 				A1A6BD302A6F8C4A008B0266 /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A6BD412A6FA750008B0266 /* ViewExtension.swift in Sources */,
 				A1A6BD2D2A6F8C48008B0266 /* ContentView.swift in Sources */,
+				A1A6BD3B2A6FA336008B0266 /* PopoverController.swift in Sources */,
 				A1A6BD2B2A6F8C48008B0266 /* iOSPopoverApp.swift in Sources */,
+				A1A6BD3D2A6FA6FF008B0266 /* HostingViewForPopover.swift in Sources */,
+				A1A6BD3F2A6FA720008B0266 /* PopoverBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

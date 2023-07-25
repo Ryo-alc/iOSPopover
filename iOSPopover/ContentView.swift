@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isPresented: Bool = false
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Button("\(isPresented ? "Dismiss" : "Present")") {
+            isPresented.toggle()
         }
-        .padding()
+        .iOSPopover(isPresented: $isPresented) {
+            Text("Popover")
+                .padding()
+        }
     }
 }
 
