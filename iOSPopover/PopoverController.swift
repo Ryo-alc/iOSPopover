@@ -32,6 +32,9 @@ struct PopoverController<Content: View>: UIViewControllerRepresentable {
             popoverController.popoverPresentationController?.sourceView = uiViewController.view
             uiViewController.present(popoverController, animated: true)
         }
+        if let hostingController = uiViewController.presentedViewController as? UIHostingController<Content> {
+            hostingController.rootView = content
+        }
     }
 
     class Coordinator: NSObject, UIPopoverPresentationControllerDelegate {
