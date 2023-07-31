@@ -22,7 +22,10 @@ struct PopoverController<Content: View>: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        if isPresented {
+        if !isPresented {
+            // Bindingの値がfalseになった時
+            uiViewController.dismiss(animated: true)
+        } else {
             let popoverContent = VStack {
                 self.content()
             }
