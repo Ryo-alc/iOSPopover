@@ -15,7 +15,7 @@ extension View {
         @ViewBuilder content: @escaping () -> Content
     ) -> some View {
         self.background {
-            PopoverController(isPresented: isPresented, content: content())
+            PopoverController(isPresented: isPresented, content: content)
         }
     }
 }

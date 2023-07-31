@@ -16,7 +16,6 @@ struct ContentView: View {
         }
         .iOSPopover(isPresented: $isPresented) {
             Text("Popover")
-                .padding()
         }
     }
 }

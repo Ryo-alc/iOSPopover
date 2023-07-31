@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PopoverController<Content: View>: UIViewControllerRepresentable {
     @Binding var isPresented: Bool
-    var content: Content
+    var content: () -> Content
 
     func makeCoordinator() -> Coordinator {
         Coordinator(parent: self)
@@ -23,7 +23,11 @@ struct PopoverController<Content: View>: UIViewControllerRepresentable {
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
         if isPresented {
-            let popoverController = HostingViewForPopover(rootView: content)
+            let popoverContent = VStack {
+                self.content()
+            }
+            .padding()
+            let popoverController = HostingViewForPopover(rootView: popoverContent)
             popoverController.view.backgroundColor = .clear
             popoverController.modalPresentationStyle = .popover
             popoverController.popoverPresentationController?.permittedArrowDirections = .up
@@ -33,7 +37,7 @@ struct PopoverController<Content: View>: UIViewControllerRepresentable {
             uiViewController.present(popoverController, animated: true)
         }
         if let hostingController = uiViewController.presentedViewController as? UIHostingController<Content> {
-            hostingController.rootView = content
+            hostingController.rootView = self.content()
         }
     }
 
